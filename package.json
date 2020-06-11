@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "preserve": "npm run clean && npm run build-public && npm run build-functions && npm run build-app && npm run copy-deps && npm run install-deps",
+    "deploy": "npm run clean && firebase deploy",
+    "clean": "rimraf \"dist\"",
     "build": "next build",
     "start": "next start"
   },
